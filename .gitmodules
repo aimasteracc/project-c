@@ -1,0 +1,9 @@
+[submodule "project-a"]
+    path = project-a
+    url = https://github.com/YOUR_USERNAME/project-a.git
+    branch = main
+
+[submodule "project-b"]
+    path = project-b
+    url = https://github.com/YOUR_USERNAME/project-b.git
+    branch = main
