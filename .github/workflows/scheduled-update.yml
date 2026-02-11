@@ -31,7 +31,14 @@ jobs:
           git submodule status
 
           echo -e "\n=== Updating submodules to latest ==="
-          git submodule update --remote --merge
+          # Update each submodule individually with merge options
+          for submodule in project-a project-b; do
+            echo "Updating $submodule..."
+            cd $submodule
+            git fetch origin main
+            git merge --allow-unrelated-histories -m "Merge remote-tracking branch 'origin/main' into HEAD" origin/main || git merge origin/main || true
+            cd ..
+          done
 
           echo -e "\n=== Updated submodule status ==="
           git submodule status
