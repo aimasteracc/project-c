@@ -1,9 +1,0 @@
-[submodule "project-a"]
-	path = project-a
-	url = https://github.com/aimasteracc/project-a.git
-	branch = main
-
-[submodule "project-b"]
-	path = project-b
-	url = https://github.com/aimasteracc/project-b.git
-	branch = main
